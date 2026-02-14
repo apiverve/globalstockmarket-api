@@ -1,0 +1,82 @@
+openapi: 3.0.4
+info:
+  title: Global Stock Market
+  description: >-
+    Global Stock Market is a tool for comparing stock market performance across
+    36 countries. It returns a normalized share price index (2015=100) from OECD
+    data, allowing you to compare market growth between countries over time.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/globalstockmarket:
+    get:
+      summary: Get Country Stock Market Index
+      description: Get the current or historical share price index for a specific country.
+      operationId: globalstockmarket
+      parameters:
+        - name: country
+          in: query
+          schema:
+            type: string
+          required: true
+          description: ISO 2-letter country code
+          example: DE
+        - name: year
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: >-
+            Specific year to retrieve all monthly data for (2000-present).
+            Returns latest if not specified.
+          example: 2023
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  country: DE
+                  countryName: Germany
+                  value: 154.28
+                  baseline: 2015=100
+                  date: '2025-12-01'
+                  lastUpdated: '2026-02-05T07:00:00.000Z'
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
