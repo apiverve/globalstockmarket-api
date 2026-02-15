@@ -1,0 +1,55 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.apiverve'
+version = '1.1.13'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation 'org.json:json:20231013'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.apiverve'
+            artifactId = 'globalstockmarket-api'
+            version = '1.1.13'
+
+            from components.java
+
+            pom {
+                name = 'Global Stock Market'
+                description = 'Global Stock Market is a tool for comparing stock market performance across 36 countries. It returns a normalized share price index (2015=100) from OECD data, allowing you to compare market growth between countries over time.'
+                url = 'https://apiverve.com'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'apiverve'
+                        name = 'APIVerve'
+                        email = 'hello@apiverve.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git://github.com/apiverve/globalstockmarket-api.git'
+                    developerConnection = 'scm:git:ssh://github.com/apiverve/globalstockmarket-api.git'
+                    url = 'https://github.com/apiverve/globalstockmarket-api'
+                }
+            }
+        }
+    }
+}
