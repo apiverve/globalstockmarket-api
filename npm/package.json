@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/globalstockmarket",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Global Stock Market is a tool for comparing stock market performance across 36 countries. It returns a normalized share price index (2015=100) from OECD data, allowing you to compare market growth between countries over time.",
   "main": "index.js",
   "types": "index.d.ts",
