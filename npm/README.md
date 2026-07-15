@@ -61,7 +61,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   country: "DE",
-  year: 2023
+  year: 2023,
+  month: 6
 };
 
 api.execute(query, function (error, data) {
@@ -82,7 +83,8 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   country: "DE",
-  year: 2023
+  year: 2023,
+  month: 6
 };
 
 api.execute(query)
@@ -104,7 +106,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   country: "DE",
-  year: 2023
+  year: 2023,
+  month: 6
 };
 
     try {
@@ -127,10 +130,11 @@ async function makeRequest() {
   "data": {
     "country": "DE",
     "countryName": "Germany",
-    "value": 154.28,
     "baseline": "2015=100",
-    "date": "2025-12-01",
-    "lastUpdated": "2026-02-05T07:00:00.000Z"
+    "year": 2023,
+    "month": 6,
+    "value": 154.28,
+    "date": "2023-06-01"
   }
 }
 ```
