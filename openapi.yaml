@@ -35,10 +35,15 @@ paths:
           schema:
             type: integer
           required: false
-          description: >-
-            Specific year to retrieve all monthly data for (2000-present).
-            Returns latest if not specified.
+          description: Year to retrieve data for (2000-present). Requires month parameter.
           example: 2023
+        - name: month
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Month to retrieve data for (1-12). Required when year is specified.
+          example: 6
       responses:
         '200':
           description: Successful Response
@@ -62,10 +67,11 @@ paths:
                 data:
                   country: DE
                   countryName: Germany
-                  value: 154.28
                   baseline: 2015=100
-                  date: '2025-12-01'
-                  lastUpdated: '2026-02-05T07:00:00.000Z'
+                  year: 2023
+                  month: 6
+                  value: 154.28
+                  date: '2023-06-01'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
