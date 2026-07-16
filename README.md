@@ -191,11 +191,34 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Global Stock Market API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "country": "DE",
+    "countryName": "Germany",
+    "baseline": "2015=100",
+    "year": 2023,
+    "month": 6,
+    "value": 154.28,
+    "date": "2023-06-01"
+  }
 }
 ```
 
