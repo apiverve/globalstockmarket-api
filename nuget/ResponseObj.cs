@@ -25,6 +25,9 @@ namespace APIVerve.API.GlobalStockMarket
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -35,16 +38,31 @@ namespace APIVerve.API.GlobalStockMarket
         [JsonProperty("countryName")]
         public string CountryName { get; set; }
 
-        [JsonProperty("value")]
-        public double Value { get; set; }
-
         [JsonProperty("baseline")]
         public string Baseline { get; set; }
 
-        [JsonProperty("date")]
-        public DateTimeOffset Date { get; set; }
+        [JsonProperty("year")]
+        public long? Year { get; set; }
 
-        [JsonProperty("lastUpdated")]
-        public DateTimeOffset LastUpdated { get; set; }
+        [JsonProperty("month")]
+        public long? Month { get; set; }
+
+        [JsonProperty("value")]
+        public double? Value { get; set; }
+
+        [JsonProperty("date")]
+        public DateTimeOffset? Date { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
