@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -25,7 +25,8 @@ class GlobalstockmarketAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "country": {"type": "string", "required": True, "minLength": 2, "maxLength": 2},
-        "year": {"type": "integer", "required": False, "min": 2000, "max": 2030}
+        "year": {"type": "integer", "required": False, "min": 2000, "max": 2030},
+        "month": {"type": "integer", "required": False, "min": 1, "max": 12}
     }
 
     # Format validation patterns

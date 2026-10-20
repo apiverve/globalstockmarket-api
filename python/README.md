@@ -1,13 +1,12 @@
 Global Stock Market API
 ============
 
-Global Stock Market is a tool for comparing stock market performance across 36 countries. It returns a normalized share price index (2015=100) from OECD data, allowing you to compare market growth between countries over time.
+Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest market index value, baseline, and date.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-globalstockmarket.svg)](https://pypi.org/project/apiverve-globalstockmarket/)
+
+This is a Python wrapper for the [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-globalstockmarket
 
 ## Configuration
 
-Before using the globalstockmarket API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Global Stock Market API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -46,7 +45,8 @@ api = GlobalstockmarketAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "DE",
-    "year": 2023
+    "year": 2023,
+    "month": 6
 }
 
 try:
@@ -63,7 +63,7 @@ except Exception as e:
 
 ## Usage
 
-The Global Stock Market API documentation is found here: [https://docs.apiverve.com/ref/globalstockmarket](https://docs.apiverve.com/ref/globalstockmarket?utm_source=pypi&utm_medium=readme).
+The Global Stock Market API documentation is found here: [https://docs.apiverve.com/ref/globalstockmarket](https://docs.apiverve.com/ref/globalstockmarket?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -87,7 +87,8 @@ Using the API client, you can perform requests to the API.
 ```python
 query = {
     "country": "DE",
-    "year": 2023
+    "year": 2023,
+    "month": 6
 }
 ```
 
@@ -110,10 +111,11 @@ print(result)
   "data": {
     "country": "DE",
     "countryName": "Germany",
-    "value": 154.28,
     "baseline": "2015=100",
-    "date": "2025-12-01",
-    "lastUpdated": "2026-02-05T07:00:00.000Z"
+    "year": 2023,
+    "month": 6,
+    "value": 154.28,
+    "date": "2023-06-01"
   }
 }
 ```
@@ -133,7 +135,8 @@ api = GlobalstockmarketAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "DE",
-    "year": 2023
+    "year": 2023,
+    "month": 6
 }
 
 try:
@@ -157,7 +160,8 @@ api = GlobalstockmarketAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "DE",
-    "year": 2023
+    "year": 2023,
+    "month": 6
 }
 
 try:
@@ -194,7 +198,8 @@ from apiverve_globalstockmarket.apiClient import GlobalstockmarketAPIClient, Glo
 
 query = {
     "country": "DE",
-    "year": 2023
+    "year": 2023,
+    "month": 6
 }
 
 # Using context manager ensures proper cleanup
@@ -223,7 +228,8 @@ api = GlobalstockmarketAPIClient("[YOUR_API_KEY]", debug=True)
 
 query = {
     "country": "DE",
-    "year": 2023
+    "year": 2023,
+    "month": 6
 }
 
 # Debug information will be printed to console
@@ -241,7 +247,8 @@ api = GlobalstockmarketAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "DE",
-    "year": 2023
+    "year": 2023,
+    "month": 6
 }
 
 try:
@@ -256,7 +263,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -267,12 +274,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
