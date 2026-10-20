@@ -1,13 +1,13 @@
-# [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Global Stock Market is a tool for comparing stock market performance across 36 countries. It returns a normalized share price index (2015&#x3D;100) from OECD data, allowing you to compare market growth between countries over time.
+Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest market index value, baseline, and date.
 
 The Global Stock Market API provides a simple, reliable way to integrate global stock market functionality into your applications. Built for developers who need production-ready global stock market capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/globalstockmarket-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/globalstockmarket](https://docs.apiverve.com/ref/globalstockmarket)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -226,7 +226,7 @@ A real response from the Global Stock Market API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Global Stock Market API](https://apiverve.com/marketplace/globalstockmarket?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
