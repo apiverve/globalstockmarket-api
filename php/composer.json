@@ -1,7 +1,7 @@
 {
     "name": "apiverve/globalstockmarket",
-    "description": "Global Stock Market is a tool for comparing stock market performance across 36 countries. It returns a normalized share price index (2015=100) from OECD data, allowing you to compare market growth between countries over time.",
-    "version": "1.2.0",
+    "description": "Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest market index value, baseline, and date.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -21,7 +21,7 @@
         "share price index",
         "international stock market"
     ],
-    "homepage": "https://apiverve.com/marketplace/globalstockmarket?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/globalstockmarket?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/globalstockmarket",

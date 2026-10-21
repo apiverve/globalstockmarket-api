@@ -1,6 +1,6 @@
 # Global Stock Market API - PHP Package
 
-Global Stock Market is a tool for comparing stock market performance across 36 countries. It returns a normalized share price index (2015=100) from OECD data, allowing you to compare market growth between countries over time.
+Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest market index value, baseline, and date.
 
 ## Installation
 
@@ -91,11 +91,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/globalstockmarket?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/globalstockmarket?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/globalstockmarket?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/globalstockmarket?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/globalstockmarket?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/globalstockmarket?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
