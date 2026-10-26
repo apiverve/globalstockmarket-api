@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/globalstockmarket",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest market index value, baseline, and date.",
   "main": "index.js",
   "types": "index.d.ts",
