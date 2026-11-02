@@ -52,6 +52,51 @@ namespace APIVerve.API.GlobalStockMarket
 
         [JsonProperty("date")]
         public DateTimeOffset? Date { get; set; }
+
+        [JsonProperty("previousValue")]
+        public double? PreviousValue { get; set; }
+
+        [JsonProperty("previousDate")]
+        public DateTimeOffset? PreviousDate { get; set; }
+
+        [JsonProperty("changeDirection")]
+        public string ChangeDirection { get; set; }
+
+        [JsonProperty("change1m")]
+        public double? Change1M { get; set; }
+
+        [JsonProperty("change3m")]
+        public double? Change3M { get; set; }
+
+        [JsonProperty("change6m")]
+        public double? Change6M { get; set; }
+
+        [JsonProperty("change12m")]
+        public double? Change12M { get; set; }
+
+        [JsonProperty("changeYtd")]
+        public double? ChangeYtd { get; set; }
+
+        [JsonProperty("high12m")]
+        public double? High12M { get; set; }
+
+        [JsonProperty("low12m")]
+        public double? Low12M { get; set; }
+
+        [JsonProperty("average12m")]
+        public double? Average12M { get; set; }
+
+        [JsonProperty("history")]
+        public History[] History { get; set; }
+    }
+
+    public partial class History
+    {
+        [JsonProperty("date")]
+        public DateTimeOffset? Date { get; set; }
+
+        [JsonProperty("value")]
+        public double? Value { get; set; }
     }
 
     public partial class Premium
