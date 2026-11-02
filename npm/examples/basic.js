@@ -17,7 +17,8 @@ const api = new globalstockmarketAPI({
 var query = {
   country: "DE",
   year: 2023,
-  month: 6
+  month: 6,
+  history: false
 };
 
 // Make the API request using callback

@@ -25,13 +25,30 @@ declare module '@apiverve/globalstockmarket' {
 
 
   interface GlobalStockMarketData {
-      country:     null | string;
-      countryName: null | string;
-      baseline:    null | string;
-      year:        number | null;
-      month:       number | null;
-      value:       number | null;
-      date:        Date | null;
+      country:         null | string;
+      countryName:     null | string;
+      baseline:        null | string;
+      year:            number | null;
+      month:           number | null;
+      value:           number | null;
+      date:            Date | null;
+      previousValue:   number | null;
+      previousDate:    Date | null;
+      changeDirection: null | string;
+      change1M:        number | null;
+      change3M:        number | null;
+      change6M:        number | null;
+      change12M:       number | null;
+      changeYtd:       number | null;
+      high12M:         number | null;
+      low12M:          number | null;
+      average12M:      number | null;
+      history:         History[];
+  }
+  
+  interface History {
+      date:  Date | null;
+      value: number | null;
   }
 
   export default class globalstockmarketWrapper {

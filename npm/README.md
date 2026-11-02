@@ -1,6 +1,6 @@
 # Global Stock Market API
 
-Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest market index value, baseline, and date.
+Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest monthly index value with the previous month's reading and direction, while paid plans add 1, 3, 6 and 12-month and year-to-date changes, the 12-month high, low and average, and the last 12 monthly readings.
 
 [![npm version](https://img.shields.io/npm/v/@apiverve/globalstockmarket.svg)](https://www.npmjs.com/package/@apiverve/globalstockmarket)
 
@@ -59,7 +59,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 var query = {
   country: "DE",
   year: 2023,
-  month: 6
+  month: 6,
+  history: false
 };
 
 api.execute(query, function (error, data) {
@@ -81,7 +82,8 @@ You can also use promises to make requests. The API returns a promise that you c
 var query = {
   country: "DE",
   year: 2023,
-  month: 6
+  month: 6,
+  history: false
 };
 
 api.execute(query)
@@ -104,7 +106,8 @@ async function makeRequest() {
     var query = {
   country: "DE",
   year: 2023,
-  month: 6
+  month: 6,
+  history: false
 };
 
     try {
@@ -128,10 +131,71 @@ async function makeRequest() {
     "country": "DE",
     "countryName": "Germany",
     "baseline": "2015=100",
-    "year": 2023,
-    "month": 6,
-    "value": 154.28,
-    "date": "2023-06-01"
+    "year": 2026,
+    "month": 9,
+    "value": 159.6559,
+    "date": "2026-09-01",
+    "previousValue": 163.2341,
+    "previousDate": "2026-08-01",
+    "changeDirection": "down",
+    "change1m": -2.1921,
+    "change3m": 2.3115,
+    "change6m": 6.7657,
+    "change12m": 5.4324,
+    "changeYtd": 3.4851,
+    "high12m": 163.2341,
+    "low12m": 149.5385,
+    "average12m": 156.1535,
+    "history": [
+      {
+        "date": "2025-10-01",
+        "value": 154.4256
+      },
+      {
+        "date": "2025-11-01",
+        "value": 150.3501
+      },
+      {
+        "date": "2025-12-01",
+        "value": 154.2791
+      },
+      {
+        "date": "2026-01-01",
+        "value": 159.3243
+      },
+      {
+        "date": "2026-02-01",
+        "value": 160.134
+      },
+      {
+        "date": "2026-03-01",
+        "value": 149.5385
+      },
+      {
+        "date": "2026-04-01",
+        "value": 153.3461
+      },
+      {
+        "date": "2026-05-01",
+        "value": 156.074
+      },
+      {
+        "date": "2026-06-01",
+        "value": 156.0489
+      },
+      {
+        "date": "2026-07-01",
+        "value": 157.4312
+      },
+      {
+        "date": "2026-08-01",
+        "value": 163.2341
+      },
+      {
+        "date": "2026-09-01",
+        "value": 159.6559
+      }
+    ]
   }
 }
 ```
