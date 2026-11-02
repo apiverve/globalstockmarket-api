@@ -15,7 +15,7 @@ use APIVerve\Globalstockmarket\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['country' => 'DE', 'year' => 2023, 'month' => 6]);
+ * $response = $client->execute(['country' => 'DE', 'year' => 2023, 'month' => 6, 'history' => true]);
  * print_r($response);
  * ```
  *
@@ -36,7 +36,8 @@ class Client
     private const VALIDATION_RULES = [
         'country' => ['type' => 'string', 'required' => true, 'minLength' => 2, 'maxLength' => 2],
         'year' => ['type' => 'integer', 'required' => false, 'min' => 2000, 'max' => 2030],
-        'month' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 12]
+        'month' => ['type' => 'integer', 'required' => false, 'min' => 1, 'max' => 12],
+        'history' => ['type' => 'boolean', 'required' => false]
     ];
 
     /**
