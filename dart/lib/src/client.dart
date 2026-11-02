@@ -46,11 +46,13 @@ final _formatPatterns = {
 
 /// Global Stock Market API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/globalstockmarket?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/globalstockmarket?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [country] (required) - ISO 2-letter country code [minLength: 2, maxLength: 2]
-/// * [year] - Specific year to retrieve all monthly data for (2000-present). Returns latest if not specified. [min: 2000, max: 2030]
+/// * [year] - Year to retrieve data for (2000-present). Requires month parameter. [min: 2000, max: 2030]
+/// * [month] - Month to retrieve data for (1-12). Required when year is specified. [min: 1, max: 12]
+/// * [history] - Include the 12 monthly readings ending at the returned month
 class GlobalstockmarketClient {
   final String apiKey;
   final String baseUrl;
@@ -60,6 +62,8 @@ class GlobalstockmarketClient {
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'country': ValidationRule(type: 'string', required: true, minLength: 2, maxLength: 2),
     'year': ValidationRule(type: 'integer', required: false, min: 2000, max: 2030),
+    'month': ValidationRule(type: 'integer', required: false, min: 1, max: 12),
+    'history': ValidationRule(type: 'boolean', required: false),
   };
 
   GlobalstockmarketClient(this.apiKey, {

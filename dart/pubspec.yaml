@@ -1,7 +1,7 @@
 name: apiverve_globalstockmarket
-description: Global Stock Market is a tool for comparing stock market performance across 36 countries. It returns a normalized share price index (2015=100) from OECD data, allowing you to compare market growth between countries over time.
-version: 1.1.14
-homepage: https://apiverve.com/marketplace/globalstockmarket?utm_source=dart&utm_medium=homepage
+description: "Global Stock Market tracks share price indices across 36 countries using a normalized 2015 baseline. Send a two-letter country code to receive the latest monthly index value with the previous month's reading and direction, while paid plans add 1, 3, 6 and 12-month and year-to-date changes, the 12-month high, low and average, and the last 12 monthly readings."
+version: 1.2.4
+homepage: https://apiverve.com/marketplace/globalstockmarket?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/globalstockmarket-api/tree/main/dart
 
 environment:
