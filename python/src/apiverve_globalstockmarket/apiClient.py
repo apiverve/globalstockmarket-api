@@ -26,7 +26,8 @@ class GlobalstockmarketAPIClient:
     VALIDATION_RULES = {
         "country": {"type": "string", "required": True, "minLength": 2, "maxLength": 2},
         "year": {"type": "integer", "required": False, "min": 2000, "max": 2030},
-        "month": {"type": "integer", "required": False, "min": 1, "max": 12}
+        "month": {"type": "integer", "required": False, "min": 1, "max": 12},
+        "history": {"type": "boolean", "required": False, "default": False}
     }
 
     # Format validation patterns
